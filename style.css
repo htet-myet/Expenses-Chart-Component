@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+.color {
+  color: hsl(10, 79%, 65%);
+  color: hsl(186, 34%, 60%);
+  color: hsl(25, 47%, 15%);
+  color: hsl(28, 10%, 53%);
+  color: hsl(27, 66%, 92%);
+  color: hsl(33, 100%, 98%);
+}
+
+body {
+  background-color: hsl(27, 66%, 92%);
+}
+
+main {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.acc-balance {
+  background-color: hsl(10, 79%, 65%);
+  color: hsl(33, 100%, 98%);
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5em;
+  width: 500px;
+  border-radius: 20px;
+}
+
+.balance {
+  font-weight: 700;
+  padding-top: 4px;
+  font-size: 30px;
+}
+
+.chart-table {
+  background-color: hsl(33, 100%, 98%);
+  width: 500px;
+  border-radius: 20px;
+  padding: 2.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.spending-days {
+  font-size: 30px;
+}
+
+.chart-container {
+  border-bottom: 2px solid hsl(27, 66%, 92%);
+  height: 8em;
+  width: 100%;
+  display: flex;
+  margin: 5em 0 3em;
+}
+
+.chart {
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+  width: 15%;
+  align-items: flex-end;
+}
+
+.chart-amount {
+  cursor: pointer;
+  padding: 5px;
+  background-color: hsl(25, 47%, 15%);
+  border-radius: 10px;
+  opacity: 0;
+  width: 55px;
+  margin: 0.5em 0;
+  height: 2.2em;
+  color: hsl(33, 100%, 98%);
+  font-size: 14px;
+  text-align: center;
+}
+
+.chart-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-value {
+  cursor: pointer;
+  width: 50px;
+  border-radius: 7px;
+  background-color: hsl(10, 79%, 65%);
+  height: var(--height);
+}
+
+.chart-value:hover {
+  filter: brightness(1.5);
+}
+
+.chart:hover .chart-amount {
+  opacity: 1;
+}
+
+.chart-value-active {
+  background-color: hsl(186, 34%, 60%);
+  width: 50px;
+  height: var(--height);
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.chart-value-active:hover {
+  filter: brightness(1.3);
+}
+
+.chart-title {
+  color: hsl(28, 10%, 53%);
+  text-align: center;
+  margin: 0.5em 0;
+  font-size: 13px;
+}
+
+.total-use {
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-month {
+  color: hsl(28, 10%, 53%);
+  font-size: 13px;
+}
+
+.total-spend {
+  font-size: 30px;
+}
+
+.total-percent {
+  padding-top: 1.5em;
+  font-size: 13px;
+}
+
+.percentage {
+  display: flex;
+  justify-content: flex-end;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.last-month {
+  color: hsl(28, 10%, 53%);
+  font-size: 13px;
+}
+
+@media screen and (max-width: 550px) {
+  .acc-balance {
+    width: 85%;
+  }
+
+  .chart-table {
+    width: 85%;
+    padding: 2em;
+  }
+
+  .chart-value {
+    width: 80%;
+  }
+
+  .chart-value-active {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .spending-days {
+    font-size: 7vw;
+  }
+
+  .chart-value {
+    width: 65%;
+  }
+
+  .chart-value-active {
+    width: 65%;
+  }
+
+  .chart-amount {
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    margin-right: 1em;
+    font-size: 3vw;
+    padding: 8px;
+    align-items: center;
+  }
+}
